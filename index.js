@@ -1,8 +1,9 @@
 // Reading a file synchronously
 
-import { readFileSync } from "node:fs";
+import { readFile } from "node:fs";
 
-const data = readFileSync("/Users/Irakli/.bash_history");
+readFile("/Users/Irakli/.bash_history", function cb(error, data) {
+  console.log(`Length: ${data.length}`);
+});
 
-console.log(`Length: ${data.length}`);
 console.log(`Process: ${process.pid}`);
