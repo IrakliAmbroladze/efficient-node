@@ -1,3 +1,5 @@
 const printGreeting = () => console.log("Hello");
 
-setInterval(printGreeting, 2_000);
+const intervalId = setInterval(printGreeting, 1_000);
+
+setTimeout(() => clearInterval(intervalId), 10_000);
