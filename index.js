@@ -1,3 +1,7 @@
-const clock = () => console.log(new Date().toLocaleTimeString());
+import { setTimeout } from "node:timers/promises";
 
-setInterval(clock, 1_000);
+setTimeout(2_000).then(function callback() {
+  console.log("World");
+});
+console.log("Hello");
+//Other operations
