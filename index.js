@@ -1,5 +1,3 @@
-const printGreeting = () => console.log("Hello");
+const clock = () => console.log(new Date().toLocaleTimeString());
 
-const intervalId = setInterval(printGreeting, 1_000);
-
-setTimeout(() => clearInterval(intervalId), 10_000);
+setInterval(clock, 1_000);
