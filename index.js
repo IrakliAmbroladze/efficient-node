@@ -1,7 +1,8 @@
-import { setTimeout } from "node:timers/promises";
+// Reading a file synchronously
 
-setTimeout(2_000).then(function callback() {
-  console.log("World");
-});
-console.log("Hello");
-//Other operations
+import { readFileSync } from "node:fs";
+
+const data = readFileSync("/Users/Irakli/.bash_history");
+
+console.log(`Length: ${data.length}`);
+console.log(`Process: ${process.pid}`);
